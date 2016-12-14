@@ -34,7 +34,7 @@ public class Balance implements BaseApi {
     private JSONObject getBalanceAPICall(String[] addresses, int filter) throws Exception {
 
         StringBuilder url = new StringBuilder(balanceUrl);
-        url.append(StringUtils.join(addresses, "|"));
+        url.append(StringUtils.join(addresses, "%7C"));
         if (filter > 0) url.append("&filter=" + filter);
         url.append("&api_code=" + API_CODE);
 
